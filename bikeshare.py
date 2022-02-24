@@ -1,9 +1,10 @@
-import time
+
 import time
 import pandas as pd
 import numpy as np
 import datetime as dt
 import click
+
 
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
@@ -319,7 +320,13 @@ def raw_data(df, mark_place):
         break
 
     return mark_place
-
+"""Another way to display Raw Data"""
+""" while True:
+    display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+    if display_data.lower() != 'yes':
+        break
+    print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+    i+=5"""
 
 def main():
     while True:
